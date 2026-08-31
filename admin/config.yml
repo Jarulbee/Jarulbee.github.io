@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-USERNAME/YOUR-REPOSITORY
+  repo: Jarulbee/Jarulbee.github.io
   branch: main
   base_url: ""
   auth_endpoint: ""
