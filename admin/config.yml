@@ -2,18 +2,47 @@ backend:
   name: github
   repo: YOUR-USERNAME/YOUR-REPOSITORY
   branch: main
+  base_url: ""
+  auth_endpoint: ""
 
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+media_folder: public/assets/images/uploads
+public_folder: /assets/images/uploads
+publish_mode: editorial_workflow
 
 collections:
-
-  - name: "blogs"
-    label: "Blogs"
-    folder: "content/blogs"
+  - name: certifications
+    label: Certifications
+    folder: content/certifications
     create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Short Name, name: short_name, widget: string}
+      - {label: Authority, name: authority, widget: string}
+      - {label: Description, name: description, widget: text}
+      - {label: Timeline, name: timeline, widget: string, required: false}
+      - label: Document Checklist
+        name: checklist
+        widget: list
+        required: false
+      - {label: WhatsApp Message, name: whatsapp_message, widget: text, required: false}
+      - {label: Body, name: body, widget: markdown}
 
-  - name: "certifications"
-    label: "Certifications"
-    folder: "content/certifications"
+  - name: blogs
+    label: Blogs
+    folder: content/blogs
     create: true
+    path: "{{category}}/{{slug}}"
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Category, name: category, widget: select, options: [BIS, BEE, WPC, EPR, MTCTE, TEC]}
+      - {label: Author, name: author, widget: string, default: Jarulbee India}
+      - {label: Publication Date, name: date, widget: datetime, format: YYYY-MM-DD, time_format: false}
+      - {label: Featured, name: featured, widget: boolean, default: false, required: false}
+      - {label: Featured Image, name: image, widget: image, required: false}
+      - {label: Excerpt, name: excerpt, widget: text, required: false}
+      - {label: Read Time, name: read_time, widget: string, required: false}
+      - {label: SEO Title, name: seo_title, widget: string, required: false}
+      - {label: SEO Description, name: seo_description, widget: text, required: false}
+      - {label: Body, name: body, widget: markdown}
