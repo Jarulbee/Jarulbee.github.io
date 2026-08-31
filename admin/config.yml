@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: Jarulbee/Jarulbee
+  repo: Jarulbee/Jarulbeegithub.io
   branch: main
-  base_url: ""
+  base_url: "jarulbee.github.io/"
   auth_endpoint: ""
 
 media_folder: public/assets/images/uploads
