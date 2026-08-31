@@ -1,0 +1,3 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"; import {getCollection} from "astro:content"; const cs=await getCollection("certifications");
+---<BaseLayout title="Certifications | Jarulbee India"><section class="hero"><p class="eyebrow">Certification Routes</p><h1>Indian regulatory approvals, organized.</h1></section><section class="section"><div class="grid">{cs.map(c=><a class="card" href={`/certifications/${c.id}/`}><p class="eyebrow">{c.data.short_name}</p><h2>{c.data.title}</h2><p>{c.data.description}</p></a>)}</div></section></BaseLayout>
