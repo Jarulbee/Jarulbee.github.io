@@ -1,6 +1,0 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Standards Directory | Jarulbee India</title><link rel="stylesheet" href="assets/styles.css"></head>
-<body><div id="site-header"></div><main>
-<section class="page-hero compact"><div class="container"><div class="eyebrow">STANDARDS DIRECTORY</div><h1>Start with the right<br><span>standard and regulator.</span></h1><p>A searchable reference layer for product categories, Indian Standards and regulatory pathways. Always validate the current applicable requirement before certification.</p></div></section>
-<section class="section"><div class="container"><input id="standard-search" class="search full" placeholder="Search product category, IS number or regulator…"><div class="standards-table-wrap"><table><thead><tr><th>Product category</th><th>Example Indian Standard</th><th>Regulatory area</th><th>Notes</th></tr></thead><tbody id="standards-body"></tbody></table></div></div></section>
-</main><div id="site-footer"></div><div id="consultation-modal"></div><script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>
