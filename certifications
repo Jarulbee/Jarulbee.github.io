@@ -1,6 +1,1 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Explore Jarulbee India's core Indian regulatory certification pathways."><title>Certifications | Jarulbee India</title><link rel="stylesheet" href="assets/styles.css"></head>
-<body><div id="site-header"></div><main>
-<section class="page-hero compact"><div class="container"><div class="eyebrow">CERTIFICATION PATHWAYS</div><h1>Find the regulatory route<br><span>your product needs.</span></h1><p>Browse the core certification and registration pathways supported by Jarulbee India.</p></div></section>
-<section class="section"><div class="container"><div class="filter-row"><input id="cert-search" class="search" placeholder="Search certification or product area…"><div class="filter-tags" id="cert-filters"></div></div><div class="service-grid" id="all-certifications"></div></div></section>
-</main><div id="site-footer"></div><div id="consultation-modal"></div><script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>
+
