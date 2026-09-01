@@ -2,8 +2,7 @@ backend:
   name: github
   repo: Jarulbee/Jarulbee.github.io
   branch: main
-  base_url: ""
-  auth_endpoint: ""
+
 
 media_folder: public/assets/images/uploads
 public_folder: /assets/images/uploads
