@@ -1,2 +1,2 @@
 import { defineConfig } from "astro/config";
-export default defineConfig({ site: "https://YOUR-USERNAME.github.io" });
+export default defineConfig({ site: "https://Jarulbee.github.io" });
