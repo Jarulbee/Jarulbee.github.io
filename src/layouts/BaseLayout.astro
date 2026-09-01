@@ -5,10 +5,82 @@ const {
   description = "Corporate regulatory and certification consulting for manufacturers entering the Indian market."
 } = Astro.props;
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content={description}></head>
-<body><header class="site-header"><a class="brand" href="/"><span class="brand-name">Jarulbee India</span><span class="brand-subtitle">Compliance Advocacy</span></a><nav><a href="/">Home</a><a href="/about/">About</a><a href="/certifications/">Certifications</a><a href="/testing/">Testing</a><a href="/standards/">Standards</a><a href="/blogs/">Blogs</a></nav><button class="mobile-menu">☰</button></header><main><slot/></main>
-<div class="consult-widget"><button id="consult-open" class="consult-btn">Free Consultation</button></div>
-<div id="consult-modal" class="modal" hidden><div class="modal-card"><button id="consult-close" class="modal-close">×</button><p class="eyebrow">Jarulbee India</p><h2>How can we help?</h2><div class="modal-actions"><a class="action-card" href="tel:+919999999999"><strong>Call Now</strong><span>Speak with us directly</span></a><a class="action-card" href="https://wa.me/919999999999?text=Hello%20Jarulbee%20India%2C%20I%20would%20like%20a%20free%20consultation." target="_blank"><strong>WhatsApp Chat</strong><span>Start a conversation</span></a><div class="calendly"><iframe src="https://calendly.com/YOUR-CALENDLY-USERNAME/free-consultation" title="Book an appointment"></iframe></div></div></div></div>
-<footer><div><strong>Jarulbee India</strong><br>Compliance Advocacy</div><div>Corporate Regulatory & Certification Consulting</div></footer>
-<script>document.getElementById("consult-open")?.addEventListener("click",()=>document.getElementById("consult-modal").hidden=false);document.getElementById("consult-close")?.addEventListener("click",()=>document.getElementById("consult-modal").hidden=true);document.querySelector(".mobile-menu")?.addEventListener("click",()=>document.querySelector("nav")?.classList.toggle("open"));</script>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-name">Jarulbee India</span>
+      <span class="brand-subtitle">Compliance Advocacy</span>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/certifications/">Certifications</a>
+      <a href="/testing/">Testing</a>
+      <a href="/standards/">Standards</a>
+      <a href="/blogs/">Blogs</a>
+    </nav>
+    <button class="mobile-menu">☰</button>
+  </header>
+  
+  <main>
+    <slot />
+  </main>
+
+  <div class="consult-widget">
+    <button id="consult-open" class="consult-btn">Free Consultation</button>
+  </div>
+
+  <div id="consult-modal" class="modal" hidden>
+    <div class="modal-card">
+      <button id="consult-close" class="modal-close">×</button>
+      <p class="eyebrow">Jarulbee India</p>
+      <h2>How can we help?</h2>
+      <div class="modal-actions">
+        <a class="action-card" href="tel:+919999999999">
+          <strong>Call Now</strong>
+          <span>Speak with us directly</span>
+        </a>
+        <a class="action-card" href="https://wa.me/919999999999?text=Hello%20Jarulbee%20India%2C%20I%20would%20like%20a%20free%20consultation." target="_blank">
+          <strong>WhatsApp Chat</strong>
+          <span>Start a conversation</span>
+        </a>
+        <div class="calendly">
+          <iframe src="https://calendly.com/YOUR-CALENDLY-USERNAME/free-consultation" title="Book an appointment"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <strong>Jarulbee India</strong><br>
+      Compliance Advocacy
+    </div>
+    <div>
+      Corporate Regulatory & Certification Consulting
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("consult-open")?.addEventListener("click", () => 
+      document.getElementById("consult-modal").hidden = false
+    );
+    
+    document.getElementById("consult-close")?.addEventListener("click", () => 
+      document.getElementById("consult-modal").hidden = true
+    );
+    
+    document.querySelector(".mobile-menu")?.addEventListener("click", () => 
+      document.querySelector("nav")?.classList.toggle("open")
+    );
+  </script>
+</body>
+</html>
