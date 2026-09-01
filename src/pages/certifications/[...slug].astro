@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import CertificationLayout from "../../layouts/CertificationLayout.astro";
+
+export async function getStaticPaths() {
+  const certifications = await getCollection("certifications");
+  return certifications.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<CertificationLayout title={entry.data.title} description={entry.data.description}>
+  <Content />
+</CertificationLayout>
