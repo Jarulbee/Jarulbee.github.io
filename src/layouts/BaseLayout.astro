@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
-const {title="Jarulbee India | Compliance Advocacy",description="Corporate regulatory and certification consulting for manufacturers entering the Indian market."}=Astro.props;
+const { 
+  title = "Jarulbee India | Compliance Advocacy",
+  description = "Corporate regulatory and certification consulting for manufacturers entering the Indian market."
+} = Astro.props;
 ---
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content={description}></head>
 <body><header class="site-header"><a class="brand" href="/"><span class="brand-name">Jarulbee India</span><span class="brand-subtitle">Compliance Advocacy</span></a><nav><a href="/">Home</a><a href="/about/">About</a><a href="/certifications/">Certifications</a><a href="/testing/">Testing</a><a href="/standards/">Standards</a><a href="/blogs/">Blogs</a></nav><button class="mobile-menu">☰</button></header><main><slot/></main>
